@@ -16,13 +16,13 @@ env/
 .env
 
 # Model files (VERY IMPORTANT)
-models/*.pkl
-models/*.joblib
+*.pkl
+*.joblib
 
 # Data files
+data/
 *.csv
 *.xlsx
-
 # Logs
 *.log
 
