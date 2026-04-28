@@ -55,8 +55,10 @@ Build an EV intelligence system that:
     "Maintain moderate speed",
     "Balanced driving"
   ]
-}```
+}
+```
 
+---
 
 ## **How to run**
 
@@ -71,7 +73,9 @@ Eco → Low current, high voltage, low temperature
 Normal → Balanced values
 Aggressive → High current, high temperature
 
-** Key Learnings:**
+---
+
+## ** Key Learnings:**
 Handling class imbalance
 Model interpretability using SHAP
 Building APIs using FastAPI
