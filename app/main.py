@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from app.schemas import InputData
 from app.model import predict
+from Recommendation_logic.recommend import get_recommendations
 
 app = FastAPI(
     title="EV Intelligence System",
@@ -16,26 +17,12 @@ def home():
 def get_prediction(data: InputData):
     input_dict = data.dict()
 
-    prediction = predict(input_dict)
+    prediction, confidence = predict(input_dict)
 
-    # simple recommendations
-    if prediction == "Aggressive":
-        recommendation = [
-            "Reduce speed",
-            "Avoid sudden acceleration"
-        ]
-    elif prediction == "Eco":
-        recommendation = [
-            "Maintain current driving pattern",
-            "Efficient driving detected"
-        ]
-    else:
-        recommendation = [
-            "Maintain moderate speed",
-            "Balanced driving"
-        ]
+    recommendation = get_recommendations(prediction, input_dict)
 
     return {
         "prediction": prediction,
+        "confidence": confidence,
         "recommendations": recommendation
     }

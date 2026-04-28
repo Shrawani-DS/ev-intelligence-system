@@ -18,4 +18,8 @@ def predict(data: dict):
 
     pred = model.predict(df)[0]
 
-    return pred
+    proba = model.predict_proba(df)[0]
+
+    confidence = dict(zip(model.classes_, proba))
+
+    return pred,confidence
