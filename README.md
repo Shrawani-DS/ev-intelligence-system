@@ -3,8 +3,8 @@
 ## Problem Statement
 Build an EV intelligence system that:
 - Predicts driving behavior (Eco, Normal, Aggressive)
+- Estimates energy consumption
 - Provides actionable recommendations
-
 ---
 
 ##  Approach
@@ -33,11 +33,11 @@ Build an EV intelligence system that:
 ---
 
 ## Input Features
-- Motor_temp
-- MCU_temp
-- MCU_Voltage_DC
-- MCU_AC_Current
-- Speed
+- Motor_temp → Motor operating temperature
+- MCU_temp → Motor Controller temperature
+- MCU_Voltage_DC → Voltage stability
+- MCU_AC_Current → Controller AC Current
+- Speed → Vehicle speed
 
 ---
 
@@ -68,10 +68,19 @@ Run FastAPI
 Run Streamlit
 - **streamlit run Streamlit_app/app.py**
 
-Explainability (SHAP)
-- Eco → Low current, high voltage, low temperature
-- Normal → Balanced values
-- Aggressive → High current, high temperature
+**Explainability (SHAP)**
+### Eco:
+- Low current
+- High voltage
+- Low temperature
+
+### Normal:
+- Balanced values
+
+### Aggressive:
+- High current
+- High temperature
+- Voltage drop
 
 ---
 
