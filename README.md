@@ -63,20 +63,20 @@ Build an EV intelligence system that:
 ## **How to run**
 
 Run FastAPI
-uvicorn app.main:app --reload
+- **uvicorn app.main:app --reload**
 
 Run Streamlit
-streamlit run Streamlit_app/app.py
+- **streamlit run Streamlit_app/app.py**
 
 Explainability (SHAP)
-Eco → Low current, high voltage, low temperature
-Normal → Balanced values
-Aggressive → High current, high temperature
+- Eco → Low current, high voltage, low temperature
+- Normal → Balanced values
+- Aggressive → High current, high temperature
 
 ---
 
 ## ** Key Learnings:**
-Handling class imbalance
-Model interpretability using SHAP
-Building APIs using FastAPI
-Creating UI using Streamlit
+- Handling class imbalance
+- Model interpretability using SHAP
+- Building APIs using FastAPI
+- Creating UI using Streamlit
