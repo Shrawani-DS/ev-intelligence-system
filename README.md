@@ -55,10 +55,10 @@ Build an EV intelligence system that:
     "Maintain moderate speed",
     "Balanced driving"
   ]
-}
+}```
 
 
-## **How to Run**
+## **How to run**
 
 Run FastAPI
 uvicorn app.main:app --reload
