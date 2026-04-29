@@ -14,7 +14,12 @@ Build an EV intelligence system that:
 - Streamlit for frontend
 
 ---
+## Why this project?
 
+Electric vehicles generate large telemetry data.  
+This system helps analyze driving patterns and improve efficiency.
+
+---
 ##  Tech Stack
 - Python
 - Scikit-learn
@@ -29,6 +34,17 @@ Build an EV intelligence system that:
 - Interactive UI (Streamlit)
 - Driving recommendations
 - Model explainability
+
+---
+## Architecture
+
+- **Frontend**: Streamlit UI for user input  
+- **Backend**: FastAPI handles API requests  
+- **Model Layer**: Trained ML model for prediction  
+- **Output**: Prediction + confidence + recommendations  
+
+Flow:  
+Streamlit → FastAPI → Model → Output
 
 ---
 
