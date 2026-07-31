@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from app.schemas import InputData
 from app.model import predict
-from Recommendation_logic.recommend import get_recommendations
+from app.recommend import get_recommendations
 
 app = FastAPI(
     title="EV Intelligence System",
